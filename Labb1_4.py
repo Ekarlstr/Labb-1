@@ -1,3 +1,4 @@
+print("Enter a number and find if there are two combinations of 2 numbers cubed that add up to your number!")
 def kubsumma(n):
     a=0
     b=0
@@ -8,15 +9,18 @@ def kubsumma(n):
             list.append((a,b))
             count=count+1
         a=a+1
-        if a > n**(1/3):
+        if a**3 > n:
             a=b
             b=b+1
-        if b**3 > n and count==2:
+        if count==2:
             print("Kubsumma: ",list)
             break
-        if count < 2 and b**3 > n +2 :
+        if count==1 and b**3 > n+2 :
+            print("No, but ", list, "is one!")
+            break
+        if count < 1 and b**3 > n +2 :
             print("lacks solutions!")
             break
 while True:
-    n=int(input("write a number: "))
+    n=int(input("Your number: "))
     kubsumma(n)
