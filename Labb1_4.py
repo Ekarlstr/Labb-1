@@ -8,16 +8,15 @@ def kubsumma(n):
             list.append((a,b))
             count=count+1
         a=a+1
-        if a**3 > n:
+        if a > n**(1/3):
             a=b
             b=b+1
-        if count==0 and b**3 > n:
-            list.append("Kubsumma saknas!")
+        if b**3 > n and count==2:
+            print("Kubsumma: ",list)
             break
-        if b**3 > n:
+        if count < 2 and b**3 > n +2 :
+            print("lacks solutions!")
             break
-    return list
 while True:
-    n=int(input("Säg ett nummer för att hitta möjliga kubsummor: "))
+    n=int(input("write a number: "))
     kubsumma(n)
-    print("Kubsumma:",list)
