@@ -3,8 +3,8 @@ def kubsumma(n):
     a=0
     b=0
     list = []
-    for b in range(0,int(n**(1/3))+1):
-        for a in range(0,int(n**(1/3))+1):
+    for b in range(0,int(n**(1.0/3.0))+1):
+        for a in range(0,int(n**(1.0/3.0))+1):
             if n== a**3 + b**3 and a>=b:
                 list.append((a,b))
     return list
