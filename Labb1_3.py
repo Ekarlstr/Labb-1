@@ -6,6 +6,8 @@ while True:
     b=0
     c=0
     while True:
+        if count==2
+            break
         if a==(b**3 + c**3):
             print("Answer: ", b, "and", c)
             Count=Count+1
